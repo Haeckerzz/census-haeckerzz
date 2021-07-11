@@ -1,0 +1,172 @@
+{
+  "member": [
+    {
+      "firstName": "Mohar",
+      "middleName": "Singh",
+      "lastName": "Rai",
+      "dob": "1970-12-10",
+      "suffix": "Mr.",
+      "gender": "Male",
+      "status": "Completed",
+      "relation": "Head",
+      "applicationID": "A-1",
+      "id": 1
+    },
+    {
+      "firstName": "Sangeeta",
+      "middleName": "",
+      "lastName": "Rai",
+      "dob": "1977-05-05",
+      "suffix": "Mrs.",
+      "gender": "Female",
+      "status": "Completed",
+      "relation": "Wife",
+      "applicationID": "A-1",
+      "id": 2
+    },
+    {
+      "firstName": "Sharad",
+      "middleName": "",
+      "lastName": "Rai",
+      "dob": "1999-10-24",
+      "suffix": "Ms.",
+      "gender": "Male",
+      "status": "Completed",
+      "relation": "Son",
+      "applicationID": "A-1",
+      "id": 3
+    },
+    {
+      "firstName": "Jaswant",
+      "middleName": "Singh",
+      "lastName": "Rai",
+      "dob": "1960-01-01",
+      "suffix": "Mr.",
+      "gender": "Male",
+      "status": "Completed",
+      "relation": "Head",
+      "applicationID": "A-2",
+      "id": 4
+    },
+    {
+      "firstName": "Kranti",
+      "middleName": "",
+      "lastName": "Rai",
+      "dob": "1965-05-04",
+      "suffix": "Mrs.",
+      "gender": "Female",
+      "status": "Completed",
+      "relation": "Wife",
+      "applicationID": "A-2",
+      "id": 5
+    },
+    {
+      "firstName": "Kirti",
+      "middleName": "",
+      "lastName": "Rai",
+      "dob": "1990-07-20",
+      "suffix": "Ms.",
+      "gender": "Female",
+      "status": "Completed",
+      "relation": "Daughter",
+      "applicationID": "A-2",
+      "id": 5
+    },
+    {
+      "firstName": "Sandeep",
+      "middleName": "",
+      "lastName": "Rai",
+      "dob": "1994-01-15",
+      "suffix": "Mr.",
+      "gender": "Male",
+      "status": "Completed",
+      "relation": "Son",
+      "applicationID": "A-2",
+      "id": 6
+    },
+    {
+      "firstName": "Devicharan",
+      "middleName": "",
+      "lastName": "Rai",
+      "suffix": "Mr.",
+      "dob": "1950-01-01",
+      "gender": "Male",
+      "relation": "Head",
+      "status": "Completed",
+      "applicationID": "A-4",
+      "id": 7
+    },
+    {
+      "firstName": "Kusum",
+      "middleName": "",
+      "lastName": "Rai",
+      "suffix": "Mrs.",
+      "dob": "1960-01-01",
+      "gender": "Female",
+      "relation": "Wife",
+      "status": "Completed",
+      "applicationID": "A-4",
+      "id": 8
+    },
+    {
+      "firstName": "Naresh",
+      "middleName": "",
+      "lastName": "Rai",
+      "suffix": "Mr.",
+      "dob": "1980-01-01",
+      "gender": "Male",
+      "relation": "Son",
+      "status": "Completed",
+      "applicationID": "A-4",
+      "id": 9
+    },
+    {
+      "firstName": "Dolly",
+      "middleName": "",
+      "lastName": "Rai",
+      "suffix": "Mrs.",
+      "dob": "1964-04-05",
+      "gender": "Female",
+      "relation": "Daughter",
+      "status": "Completed",
+      "applicationID": "A-4",
+      "id": 10
+    }
+  ],
+  "application": [
+    {
+      "applicationStatus": "Approved",
+      "applicationID": "A-1",
+      "firstName": "Mohar",
+      "lastName": "Rai",
+      "dob": "12-10-1970",
+      "memberIDs": [
+        1,
+        2,
+        3
+      ],
+      "id": 1
+    },
+    {
+      "applicationStatus": "Approved",
+      "applicationID": "A-2",
+      "firstName": "Jaswant",
+      "lastName": "Rai",
+      "dob": "01-01-1960",
+      "memberIDs": [
+        4,
+        5,
+        6
+      ],
+      "id": 2
+    },
+    {
+      "firstName": "Devicharan",
+      "lastName": "Rai",
+      "dob": "1950-01-01",
+      "applicationStatus": "InProcess",
+      "id": 4,
+      "applicationID": "A-4"
+    }
+  ]
+}
