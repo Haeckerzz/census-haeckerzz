@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import GetTable from "./GetTable";
+import {JSON_API} from './Constant';
 
 const ViewFamily = () => {
     const {id} =useParams();
-    const lurl = "http://localhost:8000/member?applicationID="+id;
+    const lurl = JSON_API+"/member?applicationID="+id;
     const [data,setData]=useState(null);
     const history = useHistory();
 
@@ -25,7 +26,7 @@ const ViewFamily = () => {
         const applicationStatus="Approved";
         const applicationID=id.replace("A-00",""); 
         const application={applicationStatus};
-        fetch("http://localhost:8000/application/"+applicationID,{
+        fetch( JSON_API+"/application/"+applicationID,{
             method:'PATCH',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(application)

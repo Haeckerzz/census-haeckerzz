@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import {JSON_API} from './Constant';
 const Create = () => {
     const {id} = useParams();
     const [firstName,setFirstName]=useState('');
@@ -28,7 +29,7 @@ const Create = () => {
         if(!id){
             status="InProcess";
             let application = {firstName,lastName,dob,status};
-            fetch('http://localhost:8000/application',{
+            fetch(`${JSON_API}/application`,{
                 method:'POST',
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(application)
@@ -37,7 +38,7 @@ const Create = () => {
                 idd=response.id;
                 applicationID="A-"+idd;
                 const appl={applicationID};
-                fetch('http://localhost:8000/application/'+idd,{
+                fetch(`${JSON_API}/application/${idd}`,{
                 method:'PATCH',
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(appl)
@@ -46,7 +47,7 @@ const Create = () => {
                 let member = {firstName,middleName,lastName,suffix,dob,gender,relation,status};
                 console.log(applicationID); 
                 member["applicationID"]=applicationID;              
-                fetch('http://localhost:8000/member',{
+                fetch(`${JSON_API}/member`,{
                     method:'POST',
                     headers: {"Content-Type":"application/json"},
                     body: JSON.stringify(member)
@@ -61,7 +62,7 @@ const Create = () => {
         else{
             let member = {firstName,middleName,lastName,suffix,dob,gender,relation,status};
             member["applicationID"]=id;
-            fetch('http://localhost:8000/member',{
+            fetch(`${JSON_API}/member`,{
                 method:'POST',
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(member)

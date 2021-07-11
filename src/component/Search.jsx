@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { useHistory } from "react-router-dom";
+import {JSON_API} from './Constant';
 const Search = () => {
     const [firstName,setFirstName]=useState('');
     const [lastName,setLastName]=useState('');
@@ -15,7 +16,7 @@ const Search = () => {
     const handleSubmit = (e) =>{
         setpending(true);
         e.preventDefault();
-        var lurl="http://localhost:8000/application?";
+        var lurl=JSON_API+"/application?";
         if (firstName){
             lurl+= ("&firstName="+firstName);
         }
@@ -28,10 +29,10 @@ const Search = () => {
         if (applicationID){
             lurl+= ("&applicationID="+applicationID);
         }
-        if ( lurl!=="http://localhost:8000/application?" && applicationStatus){
+        if ( lurl!==JSON_API+"/application?" && applicationStatus){
             lurl+= ("&applicationStatus="+applicationStatus);
         }
-        if (lurl === "http://localhost:8000/application?"){
+        if (lurl === JSON_API+"/application?"){
             setpending(false);
             return;
         }

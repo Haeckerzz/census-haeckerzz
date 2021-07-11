@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import {JSON_API} from './Constant';
 
 const EditMember = () => {
     const {id} = useParams();
@@ -15,7 +16,7 @@ const EditMember = () => {
     const history = useHistory();
 
     useEffect(()=>{
-        fetch("http://localhost:8000/member?id="+id)
+        fetch(`${JSON_API}/member?id=${id}`)
         .then(response => response.json())
         .catch(error => console.error('Error:', error))
         .then(response =>{
@@ -39,7 +40,7 @@ const EditMember = () => {
                 let status="Completed";
                 member = {firstName,middleName,lastName,suffix,dob,gender,relation,status};
             }
-            fetch("http://localhost:8000/member/"+id, {
+            fetch(`${JSON_API}/member/${id}`, {
             method: 'PATCH',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(member)
@@ -52,7 +53,7 @@ const EditMember = () => {
         }
         else{
             const member = {firstName,middleName,lastName,suffix,dob,gender,relation};
-            fetch("http://localhost:8000/member/"+id, {
+            fetch(`${JSON_API}/member/${id}`, {
             method: 'DELETE',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(member)

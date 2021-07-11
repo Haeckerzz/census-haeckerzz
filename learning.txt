@@ -9,3 +9,7 @@ private String gender;
 private Boolean isHead=false;
 npx json-server --watch data/db.json  --port 8000
 https://jasonwatmore.com/post/2020/02/01/react-fetch-http-post-request-examples
+
+`${JSON_API}/member`
+`${JSON_API}/application`
+import {JSON_API} from './Constant';

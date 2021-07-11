@@ -1,10 +1,11 @@
 import  { useState,useEffect } from 'react';
+import {JSON_API} from './Constant';
+
 const UserFetch = (ids) => {
     var [data,setData]=useState(null);
-
     useEffect(()=>{
         ids.map((id,index) => (
-            fetch("http://localhost:8000/member?id="+id)
+            fetch( JSON_API+"/member?id="+id)
             .then(response => response.json())
                 .catch(error => console.error('Error:', error))
                 .then(response =>{
@@ -16,7 +17,7 @@ const UserFetch = (ids) => {
                         setData(response);
                     } 
                 }
-                )
+            )
         )) 
     },[]);
 
